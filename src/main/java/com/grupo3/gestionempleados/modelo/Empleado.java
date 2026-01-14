@@ -1,15 +1,30 @@
 package com.grupo3.gestionempleados.modelo;
 
+import com.opencsv.bean.CsvBindByName;
 import java.io.Serializable;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement(name = "empleado")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Empleado implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @CsvBindByName(column = "Nombre")
     private String nombre;
+
+    @CsvBindByName(column = "Apellidos")
     private String apellidos;
+
+    @CsvBindByName(column = "Edad")
     private int edad;
+
+    @CsvBindByName(column = "Puesto")
     private String puesto;
+
+    @CsvBindByName(column = "Salario")
     private double salario;
 
     // Constructor vacío necesario para JAXB
@@ -24,7 +39,7 @@ public class Empleado implements Serializable {
         this.salario = salario;
     }
 
-    //Getters y setters
+    // Getters y setters
     public String getNombre() {
         return nombre;
     }
@@ -64,8 +79,8 @@ public class Empleado implements Serializable {
     public void setSalario(double salario) {
         this.salario = salario;
     }
-    
-    //Método to String
+
+    // Método to String
     @Override
     public String toString() {
         return nombre + " " + apellidos + " - " + puesto;
