@@ -1,74 +1,88 @@
 package com.gestionempleados.modelo;
 
+import com.opencsv.bean.CsvBindByName;
 import java.io.Serializable;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement(name = "empleado")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Empleado implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-    private String nombre;
-    private String apellidos;
-    private int edad;
-    private String puesto;
-    private double salario;
+  @CsvBindByName(column = "Nombre")
+  private String nombre;
 
-    // Constructor vacío necesario para JAXB
-    public Empleado() {
-    }
+  @CsvBindByName(column = "Apellidos")
+  private String apellidos;
 
-    public Empleado(String nombre, String apellidos, int edad, String puesto, double salario) {
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.edad = edad;
-        this.puesto = puesto;
-        this.salario = salario;
-    }
+  @CsvBindByName(column = "Edad")
+  private int edad;
 
-    //Getters y setters
-    public String getNombre() {
-        return nombre;
-    }
+  @CsvBindByName(column = "Puesto")
+  private String puesto;
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+  @CsvBindByName(column = "Salario")
+  private double salario;
 
-    public String getApellidos() {
-        return apellidos;
-    }
+  // Constructor vacío necesario para JAXB
+  public Empleado() {
+  }
 
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
-    }
+  public Empleado(String nombre, String apellidos, int edad, String puesto, double salario) {
+    this.nombre = nombre;
+    this.apellidos = apellidos;
+    this.edad = edad;
+    this.puesto = puesto;
+    this.salario = salario;
+  }
 
-    public int getEdad() {
-        return edad;
-    }
+  // Getters y setters
+  public String getNombre() {
+    return nombre;
+  }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
+  public void setNombre(String nombre) {
+    this.nombre = nombre;
+  }
 
-    public String getPuesto() {
-        return puesto;
-    }
+  public String getApellidos() {
+    return apellidos;
+  }
 
-    public void setPuesto(String puesto) {
-        this.puesto = puesto;
-    }
+  public void setApellidos(String apellidos) {
+    this.apellidos = apellidos;
+  }
 
-    public double getSalario() {
-        return salario;
-    }
+  public int getEdad() {
+    return edad;
+  }
 
-    public void setSalario(double salario) {
-        this.salario = salario;
-    }
+  public void setEdad(int edad) {
+    this.edad = edad;
+  }
 
-    //Método to String
-    @Override
-    public String toString() {
-        return nombre + " " + apellidos + " - " + puesto;
-    }
+  public String getPuesto() {
+    return puesto;
+  }
+
+  public void setPuesto(String puesto) {
+    this.puesto = puesto;
+  }
+
+  public double getSalario() {
+    return salario;
+  }
+
+  public void setSalario(double salario) {
+    this.salario = salario;
+  }
+
+  @Override
+  public String toString() {
+    return nombre + " " + apellidos + " - " + puesto;
+  }
 
 }
