@@ -1,23 +1,9 @@
 [
   {
-    "nombre": "Juan",
-    "apellidos": "Pérez",
-    "edad": 30,
-    "puesto": "Desarrollador",
-    "salario": 30000.0
-  },
-  {
-    "nombre": "Ana",
-    "apellidos": "García",
-    "edad": 28,
-    "puesto": "Diseñadora",
-    "salario": 32000.0
-  },
-  {
-    "nombre": "Luis",
-    "apellidos": "López",
-    "edad": 35,
-    "puesto": "Gerente",
-    "salario": 50000.0
+    "nombre": "Reda",
+    "apellidos": "Betancor",
+    "edad": 22,
+    "puesto": "Estudiante",
+    "salario": 0.0
   }
 ]
