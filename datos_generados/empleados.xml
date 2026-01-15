@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<empleados>
+    <empleado>
+        <nombre>Juan</nombre>
+        <apellidos>Pérez</apellidos>
+        <edad>30</edad>
+        <puesto>Desarrollador</puesto>
+        <salario>30000.0</salario>
+    </empleado>
+    <empleado>
+        <nombre>Ana</nombre>
+        <apellidos>García</apellidos>
+        <edad>28</edad>
+        <puesto>Diseñadora</puesto>
+        <salario>32000.0</salario>
+    </empleado>
+    <empleado>
+        <nombre>Luis</nombre>
+        <apellidos>López</apellidos>
+        <edad>35</edad>
+        <puesto>Gerente</puesto>
+        <salario>50000.0</salario>
+    </empleado>
+</empleados>
